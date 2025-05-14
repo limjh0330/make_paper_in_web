@@ -178,100 +178,106 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <h2 class="title">Schema Linking and Schema Guideline - Mapping Schema</h2>
+          <!-- Your image here -->
+          <img src="static/images/figure for web-05.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Get mapping schema information about cohort condition.
+          </h2>
+        </div>
+        <div class="item">
+          <h2 class="title">Schema Linking and Schema Guideline - Cohore schema</h2>
+          <!-- Your image here -->
+          <img src="static/images/figure for web-06.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Get all schema informaion about cohort condition.
+          </h2>
+        </div>
       <div class="item">
-        <h2 class="title">Cohort Agent Example</h2>
+        <h2 class="title">SQL Sufficiency Assessment</h2>
         <!-- Your image here -->
         <img src="static/images/figure for web-07.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Use LLM to judge that Schema information is sufficient to make SQL about cohort condition. 
+          In this case, LLM think Schema information is enough to make SQL. So, we pass other path in STEP 2.
         </h2>
       </div>
       <div class="item">
-        <h2 class="title">Cohort Agent Example</h2>
+        <h2 class="title">SQL Generation</h2>
         <!-- Your image here -->
         <img src="static/images/figure for web-08.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Make SQL with information we got from STEP 1.
         </h2>
       </div>
       <div class="item">
-        <h2 class="title">Cohort Agent Example</h2>
+        <h2 class="title">Error Feedback</h2>
         <!-- Your image here -->
         <img src="static/images/figure for web-09.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Excute SQL to get data about user cohort condition. But we get SQL Error.
+          So, we do Error Feedback to define problems about error. LLM think, its error promble is because of wrong schema. Then, we start again.
+          If we didn't get Error in this step, we could end Cohort Agent.
         </h2>
       </div>
       <div class="item">
-        <h2 class="title">Cohort Agent Example</h2>
+        <h2 class="title">Retry: Schema Linking and Schema Guideline</h2>
         <!-- Your image here -->
         <img src="static/images/figure for web-10.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Retry Schema Linking and Scehma Guideline, using all information that we got from the first step. 
         </h2>
       </div>
       <div class="item">
-        <h2 class="title">Cohort Agent Example</h2>
+        <h2 class="title">Retry: SQL Sufficient Assessment</h2>
         <!-- Your image here -->
         <img src="static/images/figure for web-11.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Use LLM again to judge that Schema information is sufficient to make SQL about cohort condition. 
+          In this case, LLM think we need more information to make correct SQL without making error. With decision, LLM make observation SQL to find additional information to think.
         </h2>
       </div>
       <div class="item">
-        <h2 class="title">Cohort Agent Example</h2>
+        <h2 class="title">Data Sufficiency Check</h2>
         <!-- Your image here -->
         <img src="static/images/figure for web-12.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Excute observation SQL to get information from Database, then input observation information to check if the observation information is already exist or is it additional important information.
         </h2>
       </div>
       <div class="item">
-        <h2 class="title">Cohort Agent Example</h2>
+        <h2 class="title">Update Schema Linking and Schema Guideline</h2>
         <!-- Your image here -->
         <img src="static/images/figure for web-13.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Update old Scehma informaion with additional infromation gotten from observation.  
         </h2>
       </div>
       <div class="item">
-        <h2 class="title">Cohort Agent Example</h2>
+        <h2 class="title">SQL Sufficient Assessment (After observation)</h2>
         <!-- Your image here -->
         <img src="static/images/figure for web-14.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Use LLM to judge that updated Schema information is sufficient to make SQL about cohort condition. 
+          After think with additional information, LLM think Schema information is enough to make SQL. So, we pass another observation and getting addition information.
         </h2>
       </div>
       <div class="item">
-        <h2 class="title">Cohort Agent Example</h2>
+        <h2 class="title">Retry: SQL Generation</h2>
         <!-- Your image here -->
         <img src="static/images/figure for web-15.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          With update Scehma information, LLM make SQL again.
         </h2>
       </div>
       <div class="item">
-        <h2 class="title">Cohort Agent Example</h2>
+        <h2 class="title">Excute SQL & Test</h2>
         <!-- Your image here -->
         <img src="static/images/figure for web-16.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <h2 class="title">Cohort Agent Example</h2>
-        <!-- Your image here -->
-        <img src="static/images/figure for web-17.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <h2 class="title">Cohort Agent Example</h2>
-        <!-- Your image here -->
-        <img src="static/images/figure for web-18.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
+          Excute SQL, then we can get data about user expectation(output format and cohort condition). Finally we can get data with our Cohort Agent.
+          We test our results with True csv file with our evaluation matrics. 
         </h2>
       </div>
     </div>
@@ -298,68 +304,64 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <h2 class="title">Schema Linking and Schema Guideline - Mapping Schema</h2>
+          <!-- Your image here -->
+          <img src="static/images/figure for web-19.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Get mapping schema information about user requested feature. It is important to find feature mapping, because information of feature like vital or lab name are defined by code in many clinical database. 
+            So, we need to find schema information which table or column is about how to define feature. 
+          </h2>
+        </div>
+        <div class="item">
+          <h2 class="title">Schema Linking and Schema Guideline - Feature Schema</h2>
+          <!-- Your image here -->
+          <img src="static/images/figure for web-20.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Get all schema informaion about feature.
+          </h2>
+        </div>
       <div class="item">
-        <h2 class="title">Code Mapping Agent Example</h2>
-        <!-- Your image here -->
-        <img src="static/images/figure for web-20.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <h2 class="title">Code Mapping Agent Example</h2>
+        <h2 class="title">Detect Feature Location</h2>
         <!-- Your image here -->
         <img src="static/images/figure for web-21.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Use LLM to think where is feature information that user want. It will be exist in column or value. If LLM action 'None', we need to use Mapping Schema to find feature.
+          In this case, LLM act 'None'. 
         </h2>
       </div>
       <div class="item">
-        <h2 class="title">Code Mapping Agent Example</h2>
+        <h2 class="title">Candidate Listing</h2>
         <!-- Your image here -->
         <img src="static/images/figure for web-22.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          LLM action is 'None', in that we need to find feature in value excuting SQL. We get TWO sql to check value, then excute them to get all value informaion.  
         </h2>
       </div>
       <div class="item">
-        <h2 class="title">Code Mapping Agent Example</h2>
-        <!-- Your image here -->
-        <img src="static/images/figure for web-10.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <h2 class="title">Code Mapping Agent Example</h2>
+        <h2 class="title">Target and Candidate Matching - Match 1</h2>
         <!-- Your image here -->
         <img src="static/images/figure for web-23.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Check all candidates(values) from SQL. We use asynchronous LLM using batch to check all cadidate quickly. 
+          So we split candidate to compare requested feature, then get all feature that might be similar with requested feature.
         </h2>
       </div>
       <div class="item">
-        <h2 class="title">Code Mapping Agent Example</h2>
+        <h2 class="title">Target and Candidate Matching - Match 2</h2>
         <!-- Your image here -->
         <img src="static/images/figure for web-24.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          After Match 1, merged into one and compare again. 
         </h2>
       </div>
       <div class="item">
-        <h2 class="title">Code Mapping Agent Example</h2>
+        <h2 class="title">Final matching Result & Test</h2>
         <!-- Your image here -->
         <img src="static/images/figure for web-25.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <h2 class="title">Code Mapping Agent Example</h2>
-        <!-- Your image here -->
-        <img src="static/images/figure for web-26.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
+          Integrate matching result from each matching list. Finally we can get feature information with our Code Mapping Agent.
+          We test our results with True json file with our evaluation matrics. 
         </h2>
       </div>
     </div>
