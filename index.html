@@ -164,7 +164,7 @@
       <div class="box" style="padding: 2rem;">
         <h2 class="title is-3" style="color: blue;">Cohort Agent Example</h2>
         <p class="subtitle is-5 has-text-grey-dark">
-          I want only <strong>male ICU patients</strong> between the <strong>age 70 and 89</strong> who have only <strong>single admission in their lifetime</strong>.
+          I want only <strong>male ICU patients</strong> between the <strong>age 70 and 89</strong> who have only <strong>single admission in their lifetime</strong>.<br>
           I am looking for <strong>age, gender</strong> as static features and <strong>mortality</strong> status for prediction.
         </p>
       </div>
@@ -181,7 +181,7 @@
         <div class="item">
           <h2 class="title">Schema Linking and Schema Guideline - Mapping Schema</h2>
           <!-- Your image here -->
-          <img src="static/images/figure for web-05.png" alt="MY ALT TEXT"/>
+          <img src="static/images/figure for web-06.png" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
             Get mapping schema information about cohort condition.
           </h2>
@@ -189,7 +189,7 @@
         <div class="item">
           <h2 class="title">Schema Linking and Schema Guideline - Cohore schema</h2>
           <!-- Your image here -->
-          <img src="static/images/figure for web-06.png" alt="MY ALT TEXT"/>
+          <img src="static/images/figure for web-07.png" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
             Get all schema informaion about cohort condition.
           </h2>
@@ -197,16 +197,16 @@
       <div class="item">
         <h2 class="title">SQL Sufficiency Assessment</h2>
         <!-- Your image here -->
-        <img src="static/images/figure for web-07.png" alt="MY ALT TEXT"/>
+        <img src="static/images/figure for web-08.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Use LLM to judge that Schema information is sufficient to make SQL about cohort condition. 
+          Use LLM to judge that Schema information is sufficient to make SQL about cohort condition.<br>
           In this case, LLM think Schema information is enough to make SQL. So, we pass other path in STEP 2.
         </h2>
       </div>
       <div class="item">
         <h2 class="title">SQL Generation</h2>
         <!-- Your image here -->
-        <img src="static/images/figure for web-08.png" alt="MY ALT TEXT"/>
+        <img src="static/images/figure for web-09.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Make SQL with information we got from STEP 1.
         </h2>
@@ -214,17 +214,17 @@
       <div class="item">
         <h2 class="title">Error Feedback</h2>
         <!-- Your image here -->
-        <img src="static/images/figure for web-09.png" alt="MY ALT TEXT"/>
+        <img src="static/images/figure for web-10.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Excute SQL to get data about user cohort condition. But we get SQL Error.
-          So, we do Error Feedback to define problems about error. LLM think, its error promble is because of wrong schema. Then, we start again.
+          Excute SQL to get data about user cohort condition. But we get SQL Error.<br>
+          So, we do Error Feedback to define problems about error. LLM think, its error promble is because of wrong schema. Then, we start again.<br>
           If we didn't get Error in this step, we could end Cohort Agent.
         </h2>
       </div>
       <div class="item">
         <h2 class="title">Retry: Schema Linking and Schema Guideline</h2>
         <!-- Your image here -->
-        <img src="static/images/figure for web-10.png" alt="MY ALT TEXT"/>
+        <img src="static/images/figure for web-11.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Retry Schema Linking and Scehma Guideline, using all information that we got from the first step. 
         </h2>
@@ -232,16 +232,16 @@
       <div class="item">
         <h2 class="title">Retry: SQL Sufficient Assessment</h2>
         <!-- Your image here -->
-        <img src="static/images/figure for web-11.png" alt="MY ALT TEXT"/>
+        <img src="static/images/figure for web-12.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Use LLM again to judge that Schema information is sufficient to make SQL about cohort condition. 
+          Use LLM again to judge that Schema information is sufficient to make SQL about cohort condition.<br>
           In this case, LLM think we need more information to make correct SQL without making error. With decision, LLM make observation SQL to find additional information to think.
         </h2>
       </div>
       <div class="item">
         <h2 class="title">Data Sufficiency Check</h2>
         <!-- Your image here -->
-        <img src="static/images/figure for web-12.png" alt="MY ALT TEXT"/>
+        <img src="static/images/figure for web-13.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Excute observation SQL to get information from Database, then input observation information to check if the observation information is already exist or is it additional important information.
         </h2>
@@ -249,7 +249,7 @@
       <div class="item">
         <h2 class="title">Update Schema Linking and Schema Guideline</h2>
         <!-- Your image here -->
-        <img src="static/images/figure for web-13.png" alt="MY ALT TEXT"/>
+        <img src="static/images/figure for web-14.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Update old Scehma informaion with additional infromation gotten from observation.  
         </h2>
@@ -257,16 +257,16 @@
       <div class="item">
         <h2 class="title">SQL Sufficient Assessment (After observation)</h2>
         <!-- Your image here -->
-        <img src="static/images/figure for web-14.png" alt="MY ALT TEXT"/>
+        <img src="static/images/figure for web-15.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Use LLM to judge that updated Schema information is sufficient to make SQL about cohort condition. 
+          Use LLM to judge that updated Schema information is sufficient to make SQL about cohort condition. <br>
           After think with additional information, LLM think Schema information is enough to make SQL. So, we pass another observation and getting addition information.
         </h2>
       </div>
       <div class="item">
         <h2 class="title">Retry: SQL Generation</h2>
         <!-- Your image here -->
-        <img src="static/images/figure for web-15.png" alt="MY ALT TEXT"/>
+        <img src="static/images/figure for web-16.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           With update Scehma information, LLM make SQL again.
         </h2>
@@ -274,9 +274,9 @@
       <div class="item">
         <h2 class="title">Excute SQL & Test</h2>
         <!-- Your image here -->
-        <img src="static/images/figure for web-16.png" alt="MY ALT TEXT"/>
+        <img src="static/images/figure for web-17.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Excute SQL, then we can get data about user expectation(output format and cohort condition). Finally we can get data with our Cohort Agent.
+          Excute SQL, then we can get data about user expectation(output format and cohort condition). Finally we can get data with our Cohort Agent.<br>
           We test our results with True csv file with our evaluation matrics. 
         </h2>
       </div>
@@ -309,7 +309,7 @@
           <!-- Your image here -->
           <img src="static/images/figure for web-19.png" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
-            Get mapping schema information about user requested feature. It is important to find feature mapping, because information of feature like vital or lab name are defined by code in many clinical database. 
+            Get mapping schema information about user requested feature. It is important to find feature mapping, because information of feature like vital or lab name are defined by code in many clinical database. <br>
             So, we need to find schema information which table or column is about how to define feature. 
           </h2>
         </div>
@@ -326,7 +326,7 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-21.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Use LLM to think where is feature information that user want. It will be exist in column or value. If LLM action 'None', we need to use Mapping Schema to find feature.
+          Use LLM to think where is feature information that user want. It will be exist in column or value. If LLM action 'None', we need to use Mapping Schema to find feature.<br>
           In this case, LLM act 'None'. 
         </h2>
       </div>
@@ -343,7 +343,7 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-23.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Check all candidates(values) from SQL. We use asynchronous LLM using batch to check all cadidate quickly. 
+          Check all candidates(values) from SQL. We use asynchronous LLM using batch to check all cadidate quickly. <br>
           So we split candidate to compare requested feature, then get all feature that might be similar with requested feature.
         </h2>
       </div>
@@ -360,7 +360,7 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-25.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Integrate matching result from each matching list. Finally we can get feature information with our Code Mapping Agent.
+          Integrate matching result from each matching list. Finally we can get feature information with our Code Mapping Agent.<br>
           We test our results with True json file with our evaluation matrics. 
         </h2>
       </div>
