@@ -25,7 +25,7 @@
 
 
   <title>Akasha project paper</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,21 +52,17 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Akasha project paper</h1>
+            <h1 class="title is-1 publication-title">From Hard-Coding to Agents: No More Rules for EMR Cohort and Feature Extraction</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author(1)</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author(2)</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author(3)</a>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Anonymous Author(s)</a><sup>*</sup>,</span>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">Institution Name<br>NeruIPS 2025</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
                   <div class="column has-text-centered">
@@ -162,7 +158,7 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <div class="box" style="padding: 2rem;">
-        <h2 class="title is-3" style="color: blue;">Cohort Agent Example</h2>
+        <h2 class="title is-3" style="color: blue;">Cohort/Feature Selection Agent (CFSA) Example</h2>
         <p class="subtitle is-5 has-text-grey-dark">
           I want only <strong>male ICU patients</strong> between the <strong>age 70 and 89</strong> who have only <strong>single admission in their lifetime</strong>.<br>
           I am looking for <strong>age, gender</strong> as static features and <strong>mortality</strong> status for prediction in <strong>EICU</strong> database.
@@ -183,7 +179,7 @@
           <!-- Your image here -->
           <img src="static/images/figure for web-06.png" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
-            Get mapping schema information about cohort condition.
+            Get mapping schema information about user-defined clinical requests.
           </h2>
         </div>
         <div class="item">
@@ -191,7 +187,7 @@
           <!-- Your image here -->
           <img src="static/images/figure for web-07.png" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
-            Get all schema information about cohort condition.
+            Get all schema information about user-defined clinical requests.
           </h2>
         </div>
       <div class="item">
@@ -199,7 +195,7 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-08.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Use LLM to judge Schema information is sufficient to make SQL about cohort condition.<br>
+          Use LLM to judge Schema information is sufficient to make SQL about user-defined clinical requests.<br>
           In this case, LLM think Schema information is enough to make SQL. So, we pass other path in STEP 2.
         </h2>
       </div>
@@ -216,7 +212,7 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-10.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Excute SQL to get data about user cohort condition. But we get SQL Error.<br>
+          Excute SQL to get data about user-defined clinical requests. But we get SQL Error.<br>
           So, we do Error Feedback to define problems about error. LLM think, its error promble is because of wrong schema.<br>
           Then, we start again. If we didn't get Error in this step, we could end Cohort Agent.
         </h2>
@@ -234,7 +230,7 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-12.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Use LLM again to judge that Schema information is sufficient to make SQL about cohort condition.<br>
+          Use LLM again to judge that Schema information is sufficient to make SQL about user-defined clinical requests.<br>
           In this case, LLM think we need more information to make correct SQL without making error.<br>
           With decision, LLM make observation SQL to find additional information to think.
         </h2>
@@ -261,7 +257,7 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-15.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Use LLM to judge that updated Schema information is sufficient to make SQL about cohort condition. <br>
+          Use LLM to judge that updated Schema information is sufficient to make SQL about user-defined clinical requests. <br>
           After think with additional information, LLM think Schema information is enough to make SQL.<br>
           So, we pass another observation and getting addition information.
         </h2>
@@ -279,7 +275,7 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-17.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Excute SQL, then we can get data about user expectation(output format and cohort condition). <br>
+          Excute SQL, then we can get data about user expectation(output format and user-defined clinical requests). <br>
           Finally we can get data with our Cohort Agent.<br>
           We test our results with True csv file with our evaluation matrics. 
         </h2>
@@ -294,7 +290,7 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <div class="box" style="padding: 2rem;">
-        <h2 class="title is-3" style="color: orange;"> Code Mapping Example</h2>
+        <h2 class="title is-3" style="color: orange;"> Code Mapping Agent (CMA) Example</h2>
         <p class="subtitle is-5 has-text-grey-dark">
           I want to use <strong>Hematocrit [Volume Fraction] of Blood (Lab-Test)</strong> as input variables in <strong>SICDB</strong> database.
         </p>
@@ -327,7 +323,7 @@
           </h2>
         </div>
       <div class="item">
-        <h2 class="title">Detect Feature Location</h2>
+        <h2 class="title">Feature Locating</h2>
         <!-- Your image here -->
         <img src="static/images/figure for web-21.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
