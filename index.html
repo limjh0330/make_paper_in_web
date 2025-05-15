@@ -191,7 +191,7 @@
           <!-- Your image here -->
           <img src="static/images/figure for web-07.png" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
-            Get all schema informaion about cohort condition.
+            Get all schema information about cohort condition.
           </h2>
         </div>
       <div class="item">
@@ -251,7 +251,7 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-14.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Update old Scehma informaion with additional infromation gotten from observation.  
+          Update old Scehma information with additional information gotten from observation.  
         </h2>
       </div>
       <div class="item">
@@ -318,7 +318,7 @@
           <!-- Your image here -->
           <img src="static/images/figure for web-20.png" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
-            Get all schema informaion about feature.
+            Get all schema information about feature.
           </h2>
         </div>
       <div class="item">
@@ -335,7 +335,7 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-22.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          LLM action is 'None', in that we need to find feature in value excuting SQL. We get TWO sql to check value, then excute them to get all value informaion.  
+          LLM action is 'None', in that we need to find feature in value excuting SQL. We get TWO sql to check value, then excute them to get all value information.  
         </h2>
       </div>
       <div class="item">
@@ -372,7 +372,53 @@
 <!-- End image carousel -->
 
 
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="box" style="padding: 2rem;">
+        <h2 class="title is-3" style="color: green;">Integration Example</h2>
+        <p class="subtitle is-5 has-text-grey-dark">
+          I want only <strong>male ICU patients</strong> between the <strong>age 70 and 89</strong> who have only <strong>single admission in their lifetime</strong>.<br>
+          I am looking for <strong>age, gender</strong> as static features and <strong>mortality</strong> status for prediction, and <strong>Heart rate(Vital Sign)</strong> information about <strong>name, values, unit, measurement time</strong>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <h2 class="title">Use Code mapping Agent & Cohort Agent</h2>
+          <!-- Your image here -->
+          <img src="static/images/figure for web-27.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Use each Agent for its role. Then get each schema information & guideline, feature matching results, and cohort SQL.
+          </h2>
+        </div>
+      <div class="item">
+        <h2 class="title">SQL generation</h2>
+        <!-- Your image here -->
+        <img src="static/images/figure for web-28.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Use LLM to make integration SQL that user requested condition. Its column list is written in the format requested by the user.
+        </h2>
+      </div>
+      <div class="item">
+        <h2 class="title">Make final integration csv file</h2>
+        <!-- Your image here -->
+        <img src="static/images/figure for web-29.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Excute integration SQL to target database. Then make user requested csv file. 
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
 
 <!-- Youtube video -->
 <!-- <section class="hero is-small is-light">
@@ -434,7 +480,7 @@
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -444,7 +490,7 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
