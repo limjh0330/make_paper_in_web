@@ -165,7 +165,7 @@
         <h2 class="title is-3" style="color: blue;">Cohort Agent Example</h2>
         <p class="subtitle is-5 has-text-grey-dark">
           I want only <strong>male ICU patients</strong> between the <strong>age 70 and 89</strong> who have only <strong>single admission in their lifetime</strong>.<br>
-          I am looking for <strong>age, gender</strong> as static features and <strong>mortality</strong> status for prediction.
+          I am looking for <strong>age, gender</strong> as static features and <strong>mortality</strong> status for prediction in <strong>EICU</strong> database.
         </p>
       </div>
     </div>
@@ -187,7 +187,7 @@
           </h2>
         </div>
         <div class="item">
-          <h2 class="title">Schema Linking and Schema Guideline - Cohore schema</h2>
+          <h2 class="title">Schema Linking and Schema Guideline - Cohort schema</h2>
           <!-- Your image here -->
           <img src="static/images/figure for web-07.png" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
@@ -199,7 +199,7 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-08.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Use LLM to judge that Schema information is sufficient to make SQL about cohort condition.<br>
+          Use LLM to judge Schema information is sufficient to make SQL about cohort condition.<br>
           In this case, LLM think Schema information is enough to make SQL. So, we pass other path in STEP 2.
         </h2>
       </div>
@@ -217,8 +217,8 @@
         <img src="static/images/figure for web-10.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Excute SQL to get data about user cohort condition. But we get SQL Error.<br>
-          So, we do Error Feedback to define problems about error. LLM think, its error promble is because of wrong schema. Then, we start again.<br>
-          If we didn't get Error in this step, we could end Cohort Agent.
+          So, we do Error Feedback to define problems about error. LLM think, its error promble is because of wrong schema.<br>
+          Then, we start again. If we didn't get Error in this step, we could end Cohort Agent.
         </h2>
       </div>
       <div class="item">
@@ -235,7 +235,8 @@
         <img src="static/images/figure for web-12.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Use LLM again to judge that Schema information is sufficient to make SQL about cohort condition.<br>
-          In this case, LLM think we need more information to make correct SQL without making error. With decision, LLM make observation SQL to find additional information to think.
+          In this case, LLM think we need more information to make correct SQL without making error.<br>
+          With decision, LLM make observation SQL to find additional information to think.
         </h2>
       </div>
       <div class="item">
@@ -243,7 +244,8 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-13.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Excute observation SQL to get information from Database, then input observation information to check if the observation information is already exist or is it additional important information.
+          Excute observation SQL to get information from Database, then input observation information to check<br>
+          if the observation information is already exist or is it additional important information.
         </h2>
       </div>
       <div class="item">
@@ -251,7 +253,7 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-14.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Update old Scehma information with additional information gotten from observation.  
+          Update old Scehma information with additional information from observation.  
         </h2>
       </div>
       <div class="item">
@@ -260,7 +262,8 @@
         <img src="static/images/figure for web-15.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Use LLM to judge that updated Schema information is sufficient to make SQL about cohort condition. <br>
-          After think with additional information, LLM think Schema information is enough to make SQL. So, we pass another observation and getting addition information.
+          After think with additional information, LLM think Schema information is enough to make SQL.<br>
+          So, we pass another observation and getting addition information.
         </h2>
       </div>
       <div class="item">
@@ -268,7 +271,7 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-16.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          With update Scehma information, LLM make SQL again.
+          With update Schema information, LLM make SQL again.
         </h2>
       </div>
       <div class="item">
@@ -276,7 +279,8 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-17.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Excute SQL, then we can get data about user expectation(output format and cohort condition). Finally we can get data with our Cohort Agent.<br>
+          Excute SQL, then we can get data about user expectation(output format and cohort condition). <br>
+          Finally we can get data with our Cohort Agent.<br>
           We test our results with True csv file with our evaluation matrics. 
         </h2>
       </div>
@@ -292,7 +296,7 @@
       <div class="box" style="padding: 2rem;">
         <h2 class="title is-3" style="color: orange;"> Code Mapping Example</h2>
         <p class="subtitle is-5 has-text-grey-dark">
-          I want to use <strong>Hematocrit [Volume Fraction] of Blood (Lab-Test)</strong> as input variables.
+          I want to use <strong>Hematocrit [Volume Fraction] of Blood (Lab-Test)</strong> as input variables in <strong>SICDB</strong> database.
         </p>
       </div>
     </div>
@@ -309,7 +313,8 @@
           <!-- Your image here -->
           <img src="static/images/figure for web-19.png" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
-            Get mapping schema information about user requested feature. It is important to find feature mapping, because information of feature like vital or lab name are defined by code in many clinical database. <br>
+            Get mapping schema information about user requested feature.<br>
+            It is important to find feature mapping, because information of feature like vital or lab name are defined by code in many clinical database.<br>
             So, we need to find schema information which table or column is about how to define feature. 
           </h2>
         </div>
@@ -326,7 +331,8 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-21.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Use LLM to think where is feature information that user want. It will be exist in column or value. If LLM action 'None', we need to use Mapping Schema to find feature.<br>
+          Use LLM to think where is feature information that user want. It will be exist in column or value.<br>
+          If LLM action 'None', we need to use Mapping Schema to find feature.<br>
           In this case, LLM act 'None'. 
         </h2>
       </div>
@@ -335,7 +341,8 @@
         <!-- Your image here -->
         <img src="static/images/figure for web-22.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          LLM action is 'None', in that we need to find feature in value excuting SQL. We get TWO sql to check value, then excute them to get all value information.  
+          LLM action is 'None', in that we need to find feature in value excuting SQL.<br>
+          We get TWO sql to check value, then excute them to get all value information.  
         </h2>
       </div>
       <div class="item">
@@ -379,7 +386,8 @@
         <h2 class="title is-3" style="color: green;">Integration Example</h2>
         <p class="subtitle is-5 has-text-grey-dark">
           I want only <strong>male ICU patients</strong> between the <strong>age 70 and 89</strong> who have only <strong>single admission in their lifetime</strong>.<br>
-          I am looking for <strong>age, gender</strong> as static features and <strong>mortality</strong> status for prediction, and <strong>Heart rate(Vital Sign)</strong> information about <strong>name, values, unit, measurement time</strong>.
+          I am looking for <strong>age, gender</strong> as static features and <strong>mortality</strong> status for prediction,<br>
+          and <strong>Heart rate(Vital Sign)</strong> information about <strong>name, values, unit, measurement time</strong> in <strong>MIMIC-III</strong> database.
         </p>
       </div>
     </div>
